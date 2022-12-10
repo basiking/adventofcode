@@ -30,6 +30,8 @@ public class ReadFile {
             try {
                 int largestNumber = Collections.max(calories);
                 System.out.println("The biggest amount of calories is: " + largestNumber);
+                calories.sort(Collections.reverseOrder());
+                System.out.println("The three elves with the most calories have in total: " + (calories.get(0) + calories.get(1) + calories.get(2)));
             }catch (ClassCastException | NoSuchElementException e){
                 System.out.println("Exception caught: " + e);
             }
